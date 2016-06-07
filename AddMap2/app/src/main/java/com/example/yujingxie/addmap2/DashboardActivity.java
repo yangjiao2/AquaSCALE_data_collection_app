@@ -3,7 +3,6 @@ package com.example.yujingxie.addmap2;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Activity;
-import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
