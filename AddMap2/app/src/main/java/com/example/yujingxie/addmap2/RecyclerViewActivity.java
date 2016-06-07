@@ -38,9 +38,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void initializeData(){
         reports = new ArrayList<>();
-        reports.add(new Report("DBH", "Front Door","3:33AM"));
+  /*      reports.add(new Report("DBH", "Front Door","3:33AM"));
         reports.add(new Report("Langson", "Restroom", "15:20PM"));
-        reports.add(new Report("MSTB", "2 floor", "2:10PM"));
+        reports.add(new Report("MSTB", "2 floor", "2:10PM"));*/
     }
 
     private void initializeAdapter(){

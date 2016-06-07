@@ -18,6 +18,7 @@ public class ParseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Parse.enableLocalDatastore(this);
+        ParseObject.registerSubclass(Report.class);
         Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
                 .applicationId("aquascale")
                 .server("https://aquascale.herokuapp.com/parse/")   // '/' important after 'parse'

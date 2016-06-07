@@ -22,6 +22,9 @@ import android.view.View.OnClickListener;
 import java.util.Locale;
 import java.text.SimpleDateFormat;
 
+import com.parse.ParseObject;
+import com.parse.ParseUser;
+
 
 public class ReportWaterActivity extends AppCompatActivity {
     final Calendar myCalendar = Calendar.getInstance();
@@ -91,6 +94,12 @@ public class ReportWaterActivity extends AppCompatActivity {
                                                 String type=editType.getItemAtPosition(editType.getSelectedItemPosition()).toString();
                                                 String description=editDescrp.getText().toString().trim();
                                                 if(!name.equals("") && !location.equals("") && !time.equals("") && !type.equals("") ){
+
+
+                                                    ParseUser currentUser = ParseUser.getCurrentUser();
+                                                    Report report = new Report(currentUser, location, time, duration, type, description);
+                                                    report.saveInBackground();
+
                                                     ContentValues content=new ContentValues();
                                                     content.put(DataHelper.KEY_NAME,name);
                                                     content.put(DataHelper.KEY_Location,location);
@@ -164,7 +173,7 @@ public class ReportWaterActivity extends AppCompatActivity {
 
     private void updateLabel() {
 
-        String myFormat = "hh/mm"; //In which you need put here
+        String myFormat = "hh:mm"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         edittext.setText(sdf.format(myCalendar.getTime()));

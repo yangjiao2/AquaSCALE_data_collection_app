@@ -4,6 +4,7 @@ import android.content.IntentSender;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -71,6 +72,9 @@ public class MapsActivity extends AppCompatActivity implements  OnMyLocationButt
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(10 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(1 * 1000); // 1 second, in milliseconds
+        /*mGoogleApiClient.connect();
+       onConnected(savedInstanceState);
+*/
     }
 
 

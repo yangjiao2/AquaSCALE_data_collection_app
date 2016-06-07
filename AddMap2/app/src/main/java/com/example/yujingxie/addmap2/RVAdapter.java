@@ -52,9 +52,9 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ReportViewHolder> 
 
     @Override
     public void onBindViewHolder(ReportViewHolder reportViewHolder, int i) {
-        reportViewHolder.Name.setText(reports.get(i).Name);
+      /*  reportViewHolder.Name.setText(reports.get(i).Name);
         reportViewHolder.Location.setText(reports.get(i).Location);
-        reportViewHolder.Time.setText(reports.get(i).Time);
+        reportViewHolder.Time.setText(reports.get(i).Time);*/
     }
 
     @Override
