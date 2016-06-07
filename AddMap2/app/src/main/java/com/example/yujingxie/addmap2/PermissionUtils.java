@@ -17,7 +17,7 @@ package com.example.yujingxie.addmap2;
 /**
  * Utility class for access to runtime permissions.
  */
-public abstract class PermissionUtils {
+public  abstract class PermissionUtils {
 
     /**
      * Requests the fine location permission. If a rationale with an additional explanation should

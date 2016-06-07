@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 public class ReportWaterActivity extends AppCompatActivity {
     final Calendar myCalendar = Calendar.getInstance();
     TextView edittext;
+    String getLoc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,9 @@ public class ReportWaterActivity extends AppCompatActivity {
         //Time Dialogue
           edittext=(EditText)findViewById(R.id.timeText);
 
+        Bundle bundle = getIntent().getExtras();
+        getLoc=bundle.getString("location");
+        System.out.print(getLoc);
 
         final TimePickerDialog.OnTimeSetListener time = new TimePickerDialog.OnTimeSetListener() {
 
@@ -79,7 +83,8 @@ public class ReportWaterActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(View v) {
                                                 String name=editName.getText().toString().trim();
-                                                String location=editLocation.getText().toString().trim();
+                                              //  String location=editLocation.getText().toString().trim();
+                                                String location=getLoc;
                                                 String time=editTime.getText().toString().trim();
                                                 int duration=Integer.parseInt(editDuration.getText().toString().trim());
                                                 String durationType1=durationType.getItemAtPosition(durationType.getSelectedItemPosition()).toString();
