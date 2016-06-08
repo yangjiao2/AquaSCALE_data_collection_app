@@ -16,32 +16,13 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.content.res.Resources;
 
-public class MainActivity extends TabActivity{
+public class MainActivity extends AppCompatActivity{
 
 
 
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
-           Resources ressources = getResources();
-            TabHost tabHost = getTabHost();
-
-            Intent intentMap = new Intent().setClass(this, MapsActivity.class);
-            TabSpec tabSpecMap = tabHost
-                    .newTabSpec("Maps")
-                    .setIndicator("")
-                    .setContent(intentMap);
-
-            Intent intentReport= new Intent().setClass(this, ReportWaterActivity.class);
-            TabSpec tabSpecReport = tabHost
-                    .newTabSpec("Maps")
-                    .setIndicator("")
-                    .setContent(intentReport);
-
-            tabHost.addTab(tabSpecMap);
-            tabHost.addTab(tabSpecReport);
-            tabHost.setCurrentTab(0);
-
             // Determine whether the current user is an anonymous user
             if (ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())) {
                 // If user is anonymous, send the user to LoginSignupActivity.class

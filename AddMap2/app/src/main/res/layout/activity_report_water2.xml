@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,7 +28,7 @@
     <TextView
         android:text="Name:"
 
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         />
 
     <EditText
@@ -34,7 +39,7 @@
         android:text="Location:"
         android:layout_column="0"
 
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         />
 
     <EditText
@@ -45,7 +50,7 @@
         android:text="Time:"
         android:layout_column="0"
 
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         />
     <EditText
         android:id="@+id/timeText"
@@ -57,7 +62,7 @@
         android:text="Duration:"
         android:layout_column="0"
 
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         />
 
     <EditText
@@ -71,7 +76,7 @@
         android:text="Duration_Type:"
         android:layout_column="0"
 
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         />
     <Spinner
         android:id="@+id/DurationType"
@@ -83,7 +88,7 @@
         android:text="Leakage_Type:"
         android:layout_column="0"
 
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         />
 
     <Spinner
@@ -94,7 +99,7 @@
     <TextView
         android:text="Description:"
         android:layout_column="0"
-        android:layout_gravity="right"
+        android:layout_gravity="left"
         />
 
     <EditText
@@ -122,4 +127,5 @@
         />
 
 </GridLayout>
+ </ScrollView>
 

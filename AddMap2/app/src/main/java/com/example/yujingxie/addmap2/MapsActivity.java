@@ -1,6 +1,7 @@
 package com.example.yujingxie.addmap2;
 
 import android.content.IntentSender;
+import android.content.res.Resources;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -26,6 +27,7 @@ import android.Manifest;
 import android.support.v4.content.ContextCompat;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TabHost;
 import android.widget.Toast;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -38,7 +40,7 @@ import android.widget.EditText;
 import org.w3c.dom.Text;
 
 
-public class MapsActivity extends AppCompatActivity implements  OnMyLocationButtonClickListener,
+public class MapsActivity extends AppCompatActivity implements OnMyLocationButtonClickListener,
         OnMapReadyCallback,
         ActivityCompat.OnRequestPermissionsResultCallback, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,LocationListener{
@@ -63,6 +65,7 @@ public class MapsActivity extends AppCompatActivity implements  OnMyLocationButt
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)

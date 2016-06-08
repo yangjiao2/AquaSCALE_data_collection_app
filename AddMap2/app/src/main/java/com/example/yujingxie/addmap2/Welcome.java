@@ -54,9 +54,9 @@ public class Welcome extends AppCompatActivity {
 
             public void onClick(View arg0) {
                 // Logout current user
-                Intent intentWelcome = new Intent(Welcome.this ,
-                        MapsActivity.class);
-                Welcome.this.startActivity(intentWelcome);
+                Intent intentNavi = new Intent(Welcome.this ,
+                        NaviActivity.class);
+                Welcome.this.startActivity(intentNavi);
                 finish();
             }
         });

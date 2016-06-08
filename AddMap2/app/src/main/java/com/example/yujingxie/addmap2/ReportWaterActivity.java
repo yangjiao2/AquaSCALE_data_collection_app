@@ -1,10 +1,15 @@
 package com.example.yujingxie.addmap2;
 
+import android.app.Activity;
+import android.app.TabActivity;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.ContactsContract;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +19,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.view.View;
 import android.support.v4.app.DialogFragment;
+import android.widget.TabHost;
 import android.widget.TextView;
 import java.util.Calendar;
 import android.app.TimePickerDialog;
@@ -26,7 +32,7 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 
-public class ReportWaterActivity extends AppCompatActivity {
+public class ReportWaterActivity extends  AppCompatActivity{
     final Calendar myCalendar = Calendar.getInstance();
     TextView edittext;
     String getLoc;
@@ -46,9 +52,9 @@ public class ReportWaterActivity extends AppCompatActivity {
         //Time Dialogue
           edittext=(EditText)findViewById(R.id.timeText);
 
-        Bundle bundle = getIntent().getExtras();
+        /*Bundle bundle = getIntent().getExtras();
         getLoc=bundle.getString("location");
-        System.out.print(getLoc);
+        System.out.print(getLoc);*/
 
         final TimePickerDialog.OnTimeSetListener time = new TimePickerDialog.OnTimeSetListener() {
 
@@ -86,10 +92,10 @@ public class ReportWaterActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(View v) {
                                                 String name=editName.getText().toString().trim();
-                                              //  String location=editLocation.getText().toString().trim();
-                                                String location=getLoc;
+                                                String location=editLocation.getText().toString().trim();
+                                              //  String location=getLoc;
                                                 String time=editTime.getText().toString().trim();
-                                                int duration=Integer.parseInt(editDuration.getText().toString().trim());
+                                                double duration=Double.parseDouble(editDuration.getText().toString().trim());
                                                 String durationType1=durationType.getItemAtPosition(durationType.getSelectedItemPosition()).toString();
                                                 String type=editType.getItemAtPosition(editType.getSelectedItemPosition()).toString();
                                                 String description=editDescrp.getText().toString().trim();
