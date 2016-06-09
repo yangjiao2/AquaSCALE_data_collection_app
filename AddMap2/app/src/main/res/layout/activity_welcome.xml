@@ -25,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:background="@drawable/button"
         android:text="@string/ContinueBtn" />
 
     <Button
@@ -33,6 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/continuebtn"
-        android:text="@string/LogoutBtn" />
+        android:background="@drawable/button"
+        android:text="@string/LogoutBtn"
+        android:layout_marginTop="40dp" />
 
 </RelativeLayout>

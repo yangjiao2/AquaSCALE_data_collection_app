@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.parse.ParseUser;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,9 +40,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void initializeData(){
         reports = new ArrayList<>();
-  /*      reports.add(new Report("DBH", "Front Door","3:33AM"));
-        reports.add(new Report("Langson", "Restroom", "15:20PM"));
-        reports.add(new Report("MSTB", "2 floor", "2:10PM"));*/
+        reports.add(new Report(ParseUser.getCurrentUser(),"DBH","3:33AM",1.0,"Type111111","Front Door"));
+        reports.add(new Report(ParseUser.getCurrentUser(),"Langson","15:20PM",1.5,"Type2222","Restroom"));
+        reports.add(new Report(ParseUser.getCurrentUser(),"MSTB","2:10PM",2.0,"Type3333","2 floor"));
     }
 
     private void initializeAdapter(){

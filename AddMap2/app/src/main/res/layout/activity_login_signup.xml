@@ -29,21 +29,40 @@
         android:id="@+id/password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/txtpassword"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
-        android:text="@string/LoginBtn" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
 
-    <Button
-        android:id="@+id/signup"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login"
-        android:text="@string/SignupBtn" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="@string/LoginBtn"
+            android:layout_below="@+id/password"
+            android:layout_alignRight="@+id/password"
+            android:layout_alignEnd="@+id/password"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="@string/SignupBtn"
+            android:layout_marginLeft="45dp"
+            android:layout_alignBaseline="@+id/login"
+            android:layout_alignBottom="@+id/login"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp" />
+    </LinearLayout>
 
 </RelativeLayout>

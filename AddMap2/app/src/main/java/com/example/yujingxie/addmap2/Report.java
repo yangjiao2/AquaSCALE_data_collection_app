@@ -19,7 +19,7 @@ import com.parse.ParseClassName;
             super();
         }
 
-        public Report(ParseUser User, String Location, String Time, int Durantion, String Type, String Description) {
+        public Report(ParseUser User, String Location, String Time, double Durantion, String Type, String Description) {
             super();
             // setName(Name);
             setUser(User);
@@ -53,7 +53,7 @@ import com.parse.ParseClassName;
     public void setTime(String value) {
         put("time", value);
     }
-    public void setDurantion(int value) {
+    public void setDurantion(double value) {
         put("duration", value);
     }
     public void setType(String value) {
