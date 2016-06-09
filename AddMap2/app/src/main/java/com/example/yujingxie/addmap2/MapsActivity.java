@@ -117,7 +117,7 @@ public class MapsActivity extends AppCompatActivity implements OnMyLocationButto
         }
         final double currentLatitude = locations.getLatitude();
         final double currentLongitude = locations.getLongitude();*/
-      final   String loc=lat+" "+lon;
+      final   String loc=lat+" " + lon;
         System.out.print(lat+" test for a");
         System.out.print(loc+"my testing testing testing");
         assert btn != null;
@@ -137,6 +137,7 @@ public class MapsActivity extends AppCompatActivity implements OnMyLocationButto
         Intent intent = new Intent(this,ReportWaterActivity.class);
         startActivity(intent);
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -154,7 +155,6 @@ public class MapsActivity extends AppCompatActivity implements OnMyLocationButto
     private void setUpMap() {
         mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
-
 
     @Override
     public void onConnected(Bundle bundle) throws SecurityException{
@@ -265,7 +265,6 @@ public class MapsActivity extends AppCompatActivity implements OnMyLocationButto
 
     @Override
     public void onConnectionSuspended(int i) {
-
         Log.i(TAG, "Location services suspended. Please reconnect.");
     }
 

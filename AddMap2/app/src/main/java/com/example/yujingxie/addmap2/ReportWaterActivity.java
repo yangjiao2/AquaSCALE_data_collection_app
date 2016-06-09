@@ -50,7 +50,7 @@ public class ReportWaterActivity extends  AppCompatActivity{
 
 
         //Time Dialogue
-          edittext=(EditText)findViewById(R.id.timeText);
+        edittext=(EditText)findViewById(R.id.timeText);
 
         /*Bundle bundle = getIntent().getExtras();
         getLoc=bundle.getString("location");
@@ -78,7 +78,7 @@ public class ReportWaterActivity extends  AppCompatActivity{
         });
 
         //save button into database with Report button
-       final DataHelper helper=new DataHelper(this, DataHelper.DATABASE_NAME,null,DataHelper.DATABASE_VER);
+        final DataHelper helper=new DataHelper(this, DataHelper.DATABASE_NAME,null,DataHelper.DATABASE_VER);
         final SQLiteDatabase db=helper.getWritableDatabase();;
         Button reportButton=(Button)findViewById(R.id.reportbtn);
         final EditText editName=(EditText)findViewById(R.id.name);

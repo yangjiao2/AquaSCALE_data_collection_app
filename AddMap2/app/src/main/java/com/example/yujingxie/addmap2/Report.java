@@ -65,7 +65,7 @@ import com.parse.ParseClassName;
 
     // Get the user for this item
     public ParseUser getUser()  {
-        return getParseUser("owner");
+        return getParseUser("user");
     }
 
     // Associate each item with a user

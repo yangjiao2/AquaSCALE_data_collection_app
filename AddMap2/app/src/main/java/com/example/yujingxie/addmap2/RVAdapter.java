@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 
 import java.util.List;
+import android.util.Log;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ReportViewHolder> {
 
@@ -26,7 +27,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ReportViewHolder> 
         ReportViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
-            Name = (TextView)itemView.findViewById(R.id.name);
+            this.Location = (TextView)itemView.findViewById(R.id.name);
             Location = (TextView)itemView.findViewById(R.id.location);
             Time = (TextView)itemView.findViewById(R.id.timeText);
         }
@@ -52,9 +53,11 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ReportViewHolder> 
 
     @Override
     public void onBindViewHolder(ReportViewHolder reportViewHolder, int i) {
-      /*  reportViewHolder.Name.setText(reports.get(i).Name);
-        reportViewHolder.Location.setText(reports.get(i).Location);
-        reportViewHolder.Time.setText(reports.get(i).Time);*/
+
+        reportViewHolder.Name.setText(this.reports.get(i).getLocation());
+        reportViewHolder.Location.setText(this.reports.get(i).getTime());
+        reportViewHolder.Time.setText(this.reports.get(i).getDescription());
+
     }
 
     @Override
